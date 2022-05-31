@@ -11,7 +11,6 @@
 #include <systemd/sd-daemon.h>
 
 #include <mosquitto.h>
-#include <wiringSerial.h>
 #include "vedirect.h"
 
 
@@ -29,7 +28,7 @@ pthread_t process_tx_thread;
 
 pthread_mutex_t lock_request_list;
 
-const char *mqtt_host = "192.168.43.57";
+const char *mqtt_host = "192.168.1.150";
 const unsigned int mqtt_port = 1883;
 const char *bmv_topic_root = "bmv";
 const unsigned int min_request_period_us = 50000; // Too fast and the BMV will miss requests
